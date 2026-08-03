@@ -12,16 +12,8 @@ export const metadata = {
 export default function LoginPage() {
   return (
     <div className="flex min-h-svh w-full bg-slate-50 p-4 sm:p-6 lg:p-8">
-      {/* Capped and centred: the panel is flex-1, so without a ceiling it eats
-          every extra pixel on wide monitors and dwarfs the form. */}
-      <div className="mx-auto flex w-full max-w-[85rem] flex-1 flex-col lg:flex-row">
-        {/* Brand panel — inset from the viewport on every side, hidden below lg. */}
+      <div className="mx-auto flex w-full max-w-340 flex-1 flex-col lg:flex-row">
         <aside className="relative hidden flex-1 overflow-hidden rounded-3xl bg-panel lg:block">
-          {/* Oversized past the panel and clipped by its overflow-hidden, which
-              keeps the artwork large while its dead margins fall outside the
-              panel entirely. max-w-none is mandatory here — Tailwind preflight
-              sets `img { max-width: 100% }`, which silently clamps any width
-              above 100% back to the panel's width. */}
           <Image
             src={blockchain}
             alt=""
