@@ -43,8 +43,10 @@ export function DashboardNavbar({ user }) {
   const current = findNavItemByPath(user.role, pathname);
   const accountLinks = getNavForRole(user.role).footer;
 
+  // The rail runs top to bottom over the left edge, so the bar starts clear of
+  // its resting width and stacks below it.
   return (
-    <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-3 border-b bg-background/95 px-4 backdrop-blur supports-backdrop-filter:bg-background/80">
+    <header className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-3 border-b bg-background/95 pr-4 pl-24 backdrop-blur md:pr-6 md:pl-28 supports-backdrop-filter:bg-background/80">
       <Link href="/dashboard" aria-label="ChainWork home">
         <ChainWorkLogo
           markClassName="size-7"
